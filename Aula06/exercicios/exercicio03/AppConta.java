@@ -21,7 +21,11 @@ public class AppConta {
                 case 1: // Cria CC
                     System.out.println("Digite o numero da conta:");
                     nrconta = tec.nextInt();
-                    contas.novaContaCorrente(nrconta);
+                    if(contas.novaContaCorrente(nrconta)) {
+                        System.out.println("Conta criada");
+                    } else {
+                        System.out.println("Conta existente");
+                    }
                     break;
                 case 2: // Cria CE
                     System.out.println("Digite o numero da conta:");
